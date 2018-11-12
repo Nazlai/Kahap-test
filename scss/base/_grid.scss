@@ -1,0 +1,26 @@
+
+.grid-container {
+    display: block;
+    @media only screen and (min-width:$breakpoint-desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "top-right top-left"
+                             "bottom-left bottom-right";
+    }
+}
+
+.slide__bg {
+    &--park {
+        grid-area: top-left;
+    }
+    &--building{
+        grid-area: top-right;
+    }
+    &--pond {
+        grid-area: bottom-left;
+    }
+    &--bridge {
+        grid-area: bottom-right;
+    }
+}

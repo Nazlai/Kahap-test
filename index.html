@@ -5,8 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="stylesheet/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-  <img src="assets/images/line.svg" alt="line icon">
+  <div class="icon"><img src="assets/images/line.svg" alt="line icon"></div>
+  <nav class="nav">
+    <!-- TODO add nav hamburger-->
+    <a href="#!"><img class="nav__logo" src="assets/images/0.png" alt="logo"></a>
+    <div class="nav__mobile">
+        <a class="mobile__hamburger" href="#!" id="js-hamburger">
+          <span class="mobile__toggle mobile__toggle" id="js-toggle"></span>
+        </a>
+    </div>
+        <ul class="nav__list nav__list">
+          <li class="nav__item"><a><span class="item item--orange">01</span>文字文字</a></li>
+          <li class="nav__item"><a><span class="item item--red">02</span>文字文字</a></li>
+          <li class="nav__item"><a><span class="item item--blue">03</span>文字文字</a></li>
+          <li class="nav__item"><a><span class="item item--purple">04</span>文字文字</a></li>
+          <li class="nav__item"><a><span class="item item--pink">Test</span>文字文字</a></li>
+          <li class="nav__item"><a><span class="item"><i class="fas fa-home"></i></span>回首頁</a></li>
+        </ul>
+  </nav>
+  <main>
+    <!-- TODO grid and center image overlay on desktop width-->
+    <div class="hero">
+      <div class="hero__wrapper">
+          <h1 class="hero__title">文字文字</h1>
+          <p class="hero__text">文字文字 文字文字</p>
+      </div>
+    </div>
+    <div class="grid-container">
+      <section class="slide">
+        <div class="slide__bg slide__bg--park">
+          <div class="slide__wrapper">
+            <h2 class="slide__title slide__title--orange">文字文字</h2>
+            <p class="slide__text">文字文字 文字文字</p>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide__bg slide__bg--building">
+          <div class="slide__wrapper">
+            <h2 class="slide__title slide__title--red">文字文字</h2>
+            <p class="slide__text">文字文字 文字文字</p>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide__bg slide__bg--pond">
+          <div class="slide__wrapper">
+            <h2 class="slide__title slide__title--blue">文字文字</h2>
+            <p class="slide__text">文字文字 文字文字</p>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="slide__bg slide__bg--bridge">
+          <div class="slide__wrapper">
+            <h2 class="slide__title slide__title--purple">文字文字</h2>
+            <p class="slide__text">文字文字 文字文字</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <!-- TODO apply color to contact and site-->
+    <h3 class="footer__title">文字文字</h3>
+    <ul class="footer__list">
+      <li class="footer__item">地址地址地址地址文字文字</li>
+      <li class="footer__item">客服專線 : <span class="footer__item--highlighted">(02)0000-0000</span></li>
+      <li class="footer__item--highlighted">www.xxx.com.tw</li>
+    </ul>
+  </footer>
+  <script src="src/script.js"></script>
 </body>
 </html>

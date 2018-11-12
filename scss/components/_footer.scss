@@ -1,0 +1,29 @@
+.footer {
+    padding: 1em;
+    text-align: left;
+    &__title {
+        margin-bottom: 5px;
+    }
+    &__list {
+        display: flex;
+        font-size: 8px;
+        @include media-min($breakpoint-small-mobile){
+            font-size: 0.6em;
+        }
+        @include media-min(){
+            font-size: 0.7em;
+        }
+    }
+    &__item {
+        margin-right: 5px;
+        color: $secondary-font-color;
+        &--highlighted {
+            color: darken($red, 20%);
+        }
+        &:nth-child(2){
+            border-left: 1px solid $secondary-font-color;
+            border-right: 1px solid $secondary-font-color;
+            padding: 0 5px;
+        }
+    }
+}

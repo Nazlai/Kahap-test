@@ -1,0 +1,27 @@
+@mixin color-modifier($attribute: 'color') {
+    @each $name, $color in $colors {
+        &--#{$name} {
+            #{$attribute}: $color;
+        }
+    }
+}
+
+@mixin prefix($property, $value, $prefixes:()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin media-min($breakpoint: $breakpoint-desktop){
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin transition($property, $duration, $timing-function){
+    -webkit-transition: #{$property} #{$duration} #{$timing-function};
+    -moz-transition: #{$property} #{$duration} #{$timing-function};
+    -o-transition: #{$property} #{$duration} #{$timing-function};
+    transition: #{$property} #{$duration} #{$timing-function};
+}
