@@ -25,3 +25,12 @@
     -o-transition: #{$property} #{$duration} #{$timing-function};
     transition: #{$property} #{$duration} #{$timing-function};
 }
+
+@mixin background-tint($url){
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.4)
+    ),
+    url($url);
+}

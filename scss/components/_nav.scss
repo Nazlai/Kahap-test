@@ -1,13 +1,15 @@
 .nav {
     display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
     @include media-min(){
+        flex-direction: row;
+        justify-content: space-between;     
         margin: 0 2em;  
     }
     &__logo {
-        max-height: 70%;
-        max-width: 70%;
-        padding: 0.5em;
+        align-self: flex-start;
+        height: 50px;
+        padding: 3px 0 3px 15px;
     }
     &__mobile {
         background-color: $mobile-toggle-color;
@@ -25,19 +27,33 @@
         padding: 0 0.5em;
         display: none;
         &--active {
+            text-align: left;
             display: block;
         }
         @include media-min(){
+            text-align: center;
             display: flex;
         }
     }
     &__item {
+        border-top: 1px solid lighten($secondary-font-color, 30%);
+        padding: 1em 2em;
+        display: flex;
+        justify-content: space-between;
+        &:nth-child(5){
+            padding: 1.5em 2em;
+        }
         &:nth-child(6){
             display: none;
         }
         @include media-min(){
+            display: block;
             padding: 0 2em;
+            border-top: none;
             border-left: 1px solid lighten($secondary-font-color, 30%);
+            &:nth-child(5){
+                padding: 0 2em;
+            }
             &:nth-child(6){
                 display: inline-block;
                 border-right: 1px solid lighten($secondary-font-color, 30%);
@@ -47,12 +63,38 @@
 }
 
 .item {
+    font-size: 2em;
+    padding-right: 1em;
     @include color-modifier();
     @include media-min(){
+        font-size: 1em;
+        padding-right: 0;
         &:after {
             content: "\00000a";
             white-space: pre;
         }
+    }
+    &--pink {
+        font-size: 1.3em;
+        padding-right: 1.2em;
+        @include media-min(){
+            font-size: 1em;
+            padding-right: 0;
+        }
+    }
+    &__icon {
+        align-self: center;
+        @include media-min(){
+            display: none;
+        }
+    }
+}   
+
+.logo {
+    &__icon {
+        max-height: 80%;
+        max-width: 80%;
+        padding: 0.5em;
     }
 }
 
