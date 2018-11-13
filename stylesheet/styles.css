@@ -83,6 +83,8 @@ table {
   grid-area: bottom-right;
 }
 
+/*    Sections
+******************/
 body {
   text-align: center;
   font: 1em/1.5 "Microsoft JhengHei";
@@ -92,6 +94,8 @@ body {
   position: relative;
 }
 
+/*    Navigation
+********************/
 .nav {
   display: flex;
   flex-direction: column;
@@ -267,6 +271,8 @@ body {
   transform: rotate(135deg);
 }
 
+/*    Hero    
+**************/
 .hero {
   height: 200px;
   background-color: #fde196;
@@ -342,6 +348,8 @@ body {
   box-shadow: 3px 0 0 0, -3px 0 0 0, 6px 0 0 0, -6px 0 0 0, 9px 0 0 0, -9px 0 0 0, 12px 0 0 0, -12px 0 0 0, 15px 0 0 0, -15px 0 0 0, 0 3px 0 0, 3px 3px 0 0, -3px 3px 0 0, 6px 3px 0 0, -6px 3px 0 0, 9px 3px 0 0, -9px 3px 0 0, 12px 3px 0 0, -12px 3px 0 0, 0 6px 0 0, 3px 6px 0 0, -3px 6px 0 0, 6px 6px 0 0, -6px 6px 0 0, 9px 6px 0 0, -9px 6px 0 0, 0 9px 0 0, 3px 9px 0 0, -3px 9px 0 0, 6px 9px 0 0, -6px 9px 0 0, 0 12px 0 0, 3px 12px 0 0, -3px 12px 0 0, 0 15px 0 0;
 }
 
+/*    Slide
+***************/
 .slide__bg {
   position: relative;
   background-size: cover;
@@ -395,6 +403,8 @@ body {
   font-size: 1.2em;
 }
 
+/*    Footer        
+****************/
 .footer {
   padding: 1em;
   text-align: left;
@@ -429,6 +439,8 @@ body {
   padding: 0 5px;
 }
 
+/*    Icon
+**************/
 .icon {
   background-color: #29af09;
   height: 24px;
