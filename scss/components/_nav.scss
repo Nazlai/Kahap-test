@@ -48,11 +48,11 @@
         }
         @include media-min(){
             display: block;
-            padding: 0 2em;
+            padding: 5px 2em 0;
             border-top: none;
             border-left: 1px solid lighten($secondary-font-color, 30%);
             &:nth-child(5){
-                padding: 0 2em;
+                padding: 5px 2em 0;
             }
             &:nth-child(6){
                 display: inline-block;
@@ -65,6 +65,11 @@
 .item {
     font-size: 2em;
     padding-right: 1em;
+    &__link {
+        color: $main-font-color;
+        text-decoration: none;
+        width: 100%;
+    }
     @include color-modifier();
     @include media-min(){
         font-size: 1em;

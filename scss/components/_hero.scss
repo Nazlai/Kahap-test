@@ -1,0 +1,104 @@
+.hero {
+    height: 200px;
+    background-color: $hero-bg-color;
+    background-image: url("../../assets/images/5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include media-min($breakpoint-tablet){
+        height: 300px;
+    }
+    @include media-min(){
+        width: 300px;
+        background-color: transparent;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    &__title {
+        letter-spacing: 5px;
+        color: $secondary-font-color;
+        margin-bottom: 0.5em;
+        @include media-min(){
+            margin-bottom: 1em;
+        }
+    }
+    &__text {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+        @include media-min(){
+            font-size: 1em;
+            margin-bottom: 2.5em;
+        }
+    }
+}
+
+.wrapper {
+    &__container {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        @include media-min(){
+            top: 50%;
+        }
+    }
+}
+
+.btn{
+    &__text {
+        font-family: "PT Sans Narrow", Helvetica, Arial, sans-serif;
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+    &__arrow {
+        background-color: $main-font-color;
+        color: $main-font-color;
+        height: 2px;
+        width: 2px;
+        position: absolute;
+        bottom: -2px;
+        left: 49%;
+        box-shadow: (
+            3px 0 0 0,
+            -3px 0 0 0,
+            6px 0 0 0,
+            -6px 0 0 0,
+            9px 0 0 0,
+            -9px 0 0 0,
+            12px 0 0 0,
+            -12px 0 0 0,
+            15px 0 0 0,
+            -15px 0 0 0,
+            0 3px 0 0,
+            3px 3px 0 0,
+            -3px 3px 0 0,
+            6px 3px 0 0,
+            -6px 3px 0 0,
+            9px 3px 0 0,
+            -9px 3px 0 0,
+            12px 3px 0 0,
+            -12px 3px 0 0,
+            0 6px 0 0,
+            3px 6px 0 0,
+            -3px 6px 0 0,
+            6px 6px 0 0,
+            -6px 6px 0 0,
+            9px 6px 0 0,
+            -9px 6px 0 0,
+            0 9px 0 0,
+            3px 9px 0 0,
+            -3px 9px 0 0,
+            6px 9px 0 0,
+            -6px 9px 0 0,
+            0 12px 0 0,
+            3px 12px 0 0,
+            -3px 12px 0 0,
+            0 15px 0 0
+        )
+    }
+}

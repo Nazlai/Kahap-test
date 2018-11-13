@@ -6,12 +6,12 @@
     }
     &__list {
         display: flex;
-        font-size: 8px;
+        font-size: 0.5em;
         @include media-min($breakpoint-small-mobile){
             font-size: 0.6em;
         }
-        @include media-min(){
-            font-size: 0.7em;
+        @include media-min($breakpoint-tablet){
+            font-size: 1em;
         }
     }
     &__item {
