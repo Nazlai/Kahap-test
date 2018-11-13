@@ -85,17 +85,19 @@ table {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 @media only screen and (min-width: 1000px) {
   .nav {
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 2em;
   }
 }
 .nav__logo {
-  max-height: 70%;
-  max-width: 70%;
-  padding: 0.5em;
+  align-self: flex-start;
+  height: 50px;
+  padding: 3px 0 3px 15px;
 }
 .nav__mobile {
   background-color: #5d5d5d;
@@ -116,20 +118,36 @@ table {
   display: none;
 }
 .nav__list--active {
+  text-align: left;
   display: block;
 }
 @media only screen and (min-width: 1000px) {
   .nav__list {
+    text-align: center;
     display: flex;
   }
+}
+.nav__item {
+  border-top: 1px solid lightgray;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__item:nth-child(5) {
+  padding: 1.5em 2em;
 }
 .nav__item:nth-child(6) {
   display: none;
 }
 @media only screen and (min-width: 1000px) {
   .nav__item {
+    display: block;
     padding: 0 2em;
+    border-top: none;
     border-left: 1px solid lightgray;
+  }
+  .nav__item:nth-child(5) {
+    padding: 0 2em;
   }
   .nav__item:nth-child(6) {
     display: inline-block;
@@ -137,6 +155,10 @@ table {
   }
 }
 
+.item {
+  font-size: 2em;
+  padding-right: 1em;
+}
 .item--orange {
   color: #fab641;
 }
@@ -153,10 +175,38 @@ table {
   color: #f64391;
 }
 @media only screen and (min-width: 1000px) {
+  .item {
+    font-size: 1em;
+    padding-right: 0;
+  }
   .item:after {
     content: "\a";
     white-space: pre;
   }
+}
+.item--pink {
+  font-size: 1.3em;
+  padding-right: 1.2em;
+}
+@media only screen and (min-width: 1000px) {
+  .item--pink {
+    font-size: 1em;
+    padding-right: 0;
+  }
+}
+.item__icon {
+  align-self: center;
+}
+@media only screen and (min-width: 1000px) {
+  .item__icon {
+    display: none;
+  }
+}
+
+.logo__icon {
+  max-height: 80%;
+  max-width: 80%;
+  padding: 0.5em;
 }
 
 .mobile__hamburger {
@@ -203,13 +253,6 @@ table {
   transform: rotate(135deg);
 }
 
-.hero__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .slide__bg {
   position: relative;
   background-size: contain;
@@ -219,16 +262,16 @@ table {
   padding-top: 56.25%;
 }
 .slide__bg--park {
-  background-image: url("../../assets/images/1.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../../assets/images/1.JPG");
 }
 .slide__bg--building {
-  background-image: url("../../assets/images/2.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../../assets/images/2.JPG");
 }
 .slide__bg--pond {
-  background-image: url("../../assets/images/3.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../../assets/images/3.JPG");
 }
 .slide__bg--bridge {
-  background-image: url("../../assets/images/4.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../../assets/images/4.JPG");
 }
 .slide__wrapper {
   position: absolute;
